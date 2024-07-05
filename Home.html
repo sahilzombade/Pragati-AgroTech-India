@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="Home.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+  <div id="navbar" class="nav">
+    <div class="logo-section">
+      <div class="logo">
+        <img src="/Images/Logo.png" alt="Logo">
+      </div>
+    </div>
+    <div class="menu-section">
+      <ul>
+        <li>
+          <a href="Home.html">Home</a>
+        </li>
+        <li>
+          <a href="About.html">About</a>
+        </li>
+        <li>
+          <a href="Products.html">Products</a>
+        </li>
+        <li>
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="hero-section">
+    <video id="hero-video" autoplay loop muted>
+      <source src="/Images/homepage vid1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="welcome-statement">
+      <h1>Welcome to Our Company</h1>
+      <p>Discover the best products and services<br>for all your poultry needs.</p>
+      <a href="#" class="cta-button">Learn More</a>
+    </div>
+  </div>
+
+  <div id="overview-section">
+    <div class="company-overview">
+      <h2>Company Overview</h2>
+      
+      <p id="typing-text"></p>  
+  </div>
+
+  <div id="footer" class="footer-main">
+    <footer>
+      <div class="footer-content">
+        <div class="footer-address">
+          <p><b>Corporate Address</b></p>
+          <p>B-201, Plot No. SU,LSC, North Ex. Sect-9,<br> Rohini, New Delhi - 110085, India</p>
+        </div>
+        <div class="footer-contact">
+          <p><b>Contact Details</b></p>
+          <p>Customer Care: 9212192531, 9810987959 <br> Email: <a href="mailto:pragatiagroindia@gmail.com"><i>pragatiagroindia@gmail.com</i></a></p>
+        </div>
+      </div>
+      <hr>
+    </footer>
+
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/pragati-agrotech-india/" target="_blank"><img src="/Images/Linkedin Icon.png" alt="Linkedin"></a>
+      <a href="https://www.youtube.com/@pragatipoultryhouse1180" target="_blank"><img src="/Images/youtube.png" alt="Youtube"></a>
+      <a href="https://wa.me/9212192531" target="_blank"><img src="/Images/whatsapp.png" alt="Whatsapp"></a>
+      <a href="mailto:pragatiagroindia@gmail.com" target="_blank"><img src="/Images/Gmail.png" alt="Mail"></a>
+    </div>
+  </div>
+
+
+
+  <script>
+    // Text to be displayed with typing effect
+    const text = "Pragati Agrotech India, a renowned name in the poultry industry, has been a trusted unit of poultry supplements, feed, and medicine for over 20 years. Our commitment to excellence and innovation has positioned us as a leader in the field. At Pragati Agrotech India, we are driven by a passion for improving poultry health and productivity. Our dedicated team of experts relentlessly researches and develops cutting-edge medicines that are proven to deliver outstanding results. We employ state-of-the-art technologies and adhere to stringent quality standards to ensure the effectiveness and safety of our products. In addition to our exceptional product line, we take pride in offering top-notch consultancy services. Our experienced consultants possess in-depth knowledge of the poultry industry and are well-equipped to address various challenges faced by our clients. Whether it's disease management, nutrition optimization, or production efficiency, we provide tailored solutions and guidance that help our clients achieve their goals. We believe in building strong partnerships with our clients, working closely with them to understand their specific needs and deliver customized solutions. Our focus on customer satisfaction, coupled with our unwavering commitment to quality, has earned us a reputation for reliability and trustworthiness in the industry. When you choose Pragati Agrotech India, you not only gain access to premium poultry products and medicines but also benefit from our expertise and personalized support. We are dedicated to driving the success of our clients' poultry businesses by providing comprehensive solutions that maximize profitability and sustainability. Join us on this journey and experience the difference that Pragati Agrotech India can make in your poultry operations. Together, we can shape a thriving and prosperous future for the poultry industry. Feel free to reach out to us to learn more about our products, services, and how we can assist you in achieving your poultry goals.";
+
+    // Get the HTML element where the typing effect will be displayed
+    const typingElement = document.getElementById("typing-text");
+
+    // Initialize the index and empty string for the typing effect
+    let index = 0;
+    let typedText = "";
+
+    // Start the typing effect using setInterval
+    const typingInterval = setInterval(() => {
+      typedText += text[index];
+      typingElement.textContent = typedText;
+      index++;
+
+      // Check if the typing effect is complete
+      if (index === text.length) {
+        clearInterval(typingInterval);
+      }
+    }, 25); // Delay between each character (adjust as needed)
+  </script>
+
+</body>
+
+</html>

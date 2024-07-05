@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Global reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    }
+
+    /* Navbar styles */
+    #navbar {
+      position: static;
+      z-index: 1;
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo-section,
+    .menu-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 65px;
+      width: 65px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    ul li {
+      margin-right: 10px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px;
+      transition: color 0.3s ease;
+    }
+
+    ul li a:hover {
+      color: #0D6EFD;
+    }
+
+    /* Footer styles */
+    #footer {
+      position: relative;
+      z-index: 1;
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-address,
+    .footer-contact {
+      flex-basis: 45%;
+      padding: 10px;
+    }
+
+    .footer-address p,
+    .footer-contact p {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .footer-contact a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-social img {
+      height: 30px;
+      width: 30px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    /* Contact Us page styles */
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .bg-white {
+      background-color: #ffffff;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .shadow-md {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .max-w-3xl {
+      max-width: 48rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    .text-gray-700 {
+      color: #4a5568;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .text-blue-500 {
+      color: #3b82f6;
+    }
+
+    .hover\:underline:hover {
+      text-decoration: underline;
+    }
+
+    .space-y-4 > * + * {
+      margin-top: 1rem;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .shadow-sm {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .focus\:ring-blue-500:focus {
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    }
+
+    .focus\:border-blue-500:focus {
+      border-color: #3b82f6;
+    }
+
+    .border-gray-300 {
+      border-color: #d1d5db;
+    }
+
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .bg-blue-500 {
+      background-color: #3b82f6;
+    }
+
+    .hover\:bg-blue-600:hover {
+      background-color: #2563eb;
+    }
+
+    .text-white {
+      color: #ffffff;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .focus\:outline-none:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    .focus\:ring-2:focus {
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    }
+
+    .focus\:ring-opacity-50:focus {
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar" class="nav">
+    <div class="logo-section">
+      <div class="logo">
+        <img src="/Images/Logo.png" alt="Logo">
+      </div>
+    </div>
+    <div class="menu-section">
+      <ul>
+        <li>
+          <a href="Home.html">Home</a>
+        </li>
+        <li>
+          <a href="About.html">About</a>
+        </li>
+        <li>
+          <a href="Products.html">Products</a>
+        </li>
+        <li>
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md max-w-3xl w-full">
+      <h1 class="text-3xl font-bold mb-6 text-center">Contact Us</h1>
+      <div class="mb-6">
+        <div class="mb-4">
+          <p class="text-lg font-medium mb-2">Address:</p>
+          <p class="text-gray-700">123 Main Street, City, Country</p>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-medium mb-2">WhatsApp Number:</p>
+          <p class="text-gray-700">+1234567890</p>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-medium mb-2">Contact Numbers:</p>
+          <p class="text-gray-700">+91 9876543210, +91 8765432109</p>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-medium mb-2">Email Address:</p>
+          <p class="text-gray-700">info@pragatiagrotech.com</p>
+        </div>
+        <div class="mb-4">
+          <p class="text-lg font-medium mb-2">YouTube Channel:</p>
+          <a href="https://www.youtube.com/channel/yourchannel" target="_blank" class="text-blue-500 hover:underline">Pragati Agrotech India</a>
+        </div>
+      </div>
+      <hr class="my-6">
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Enter your name" class="py-2 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input id="email" name="email" type="email" required placeholder="Enter your email" class="py-2 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Enter your message" class="py-2 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"></textarea>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+  <div id="footer" class="footer-main">
+    <footer>
+      <div class="footer-content">
+        <div class="footer-address">
+          <p><b>Corporate Address</b></p>
+          <p>B-201, Plot No. SU,LSC, North Ex. Sect-9,<br> Rohini, New Delhi - 110085, India</p>
+        </div>
+        <div class="footer-contact">
+          <p><b>Contact Details</b></p>
+          <p>Customer Care: 9212192531, 9810987959 <br> Email: <a href="mailto:pragatiagroindia@gmail.com"><i>pragatiagroindia@gmail.com</i></a></p>
+        </div>
+      </div>
+      <hr>
+    </footer>
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/pragati-agrotech-india/" target="_blank"><img src="/Images/Linkedin Icon.png" alt="Linkedin"></a>
+      <a href="https://www.youtube.com/@pragatipoultryhouse1180" target="_blank"><img src="/Images/youtube.png" alt="Youtube"></a>
+      <a href="https://wa.me/9212192531" target="_blank"><img src="/Images/whatsapp.png" alt="Whatsapp"></a>
+      <a href="mailto:pragatiagroindia@gmail.com" target="_blank"><img src="/Images/Gmail.png" alt="Mail"></a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* Reset default styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+#navbar {
+  position: static;
+  z-index: 1;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-section,
+.menu-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 65px;
+  width: 65px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #0D6EFD;
+}
+
+
+/* Footer styles */
+#footer {
+  position: relative;
+  z-index: 1;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-address,
+.footer-contact {
+  flex-basis: 45%;
+  padding: 10px;
+}
+
+.footer-address p,
+.footer-contact p {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social img {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* Video and text on video */
+
+#hero-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px); /* Adjusted the height to accommodate the navbar and footer */
+  overflow: hidden;
+}
+
+#hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-statement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.welcome-statement h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.welcome-statement p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0D6EFD;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0647B3;
+}
+
+/* Company Overview styles */
+
+.company-overview {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+}
+
+.company-overview:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+
+.company-overview h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 25px;
+
+}
+
+.company-overview p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+
+}
+
+
+
+
+
+
+
+
+
